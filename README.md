@@ -9,7 +9,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Demo
 
-![sample-image.png](https://github.com/zainuleb/flick-pik-angular-13/blob/master/ngSnip.PNG?raw=true)
+![sample-image.png](https://github.com/zainuleb/flick-pik-angular-13/blob/master/assets/ngSnip.PNG?raw=true)
 
 ## Further help
 
