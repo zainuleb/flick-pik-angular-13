@@ -1,0 +1,140 @@
+.search-box {
+  width: 350px;
+  position: relative;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.search-input {
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  padding: 15px 45px 15px 15px;
+  background-color: #eaeaeb;
+  color: #6c6c6c;
+  border-radius: 6px;
+  border: none;
+  transition: all 0.4s;
+}
+
+.search-input:focus {
+  border: none;
+  outline: none;
+  box-shadow: 0 1px 12px #b8c6db;
+  -moz-box-shadow: 0 1px 12px #b8c6db;
+  -webkit-box-shadow: 0 1px 12px #b8c6db;
+}
+
+.search-btn {
+  background-color: transparent;
+  font-size: 18px;
+  padding: 6px 9px;
+  margin-left: -45px;
+  border: none;
+  color: #6c6c6c;
+  transition: all 0.4s;
+  z-index: 10;
+}
+
+.search-btn:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  color: black;
+}
+
+.search-btn:focus {
+  outline: none;
+  color: black;
+}
+
+.photoSection {
+  display: flex;
+  flex-wrap: wrap;
+  >div {
+    width: 20%;
+    flex: 0 0 20%;
+    margin-bottom: 30px;
+  }
+}
+
+.photoItem {
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: (255, 255, 255, 0.2);
+  box-shadow: 0 1px 12px #b8c6db;
+  -moz-box-shadow: 0 1px 12px #b8c6db;
+  -webkit-box-shadow: 0 1px 12px #b8c6db;
+  max-width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+}
+
+form {
+  position: relative;
+  margin: 2rem auto;
+  width: 74%;
+}
+.search-box,
+.search-icon,
+.close-icon,
+.search-wrapper {
+  padding: 10px;
+}
+.search-wrapper {
+  max-width: 500px;
+  margin: 50px auto;
+}
+.search-box {
+  border: 1px solid #ccc;
+  outline: 0;
+  border-radius: 15px;
+  font-size: 15px;
+  position: relative;
+}
+.search-box:focus {
+  box-shadow: 0 0 15px 5px #b0e0ee;
+  border: 2px solid #bebede;
+}
+
+.search-icon,
+.close-icon {
+  border: 1px solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 15px;
+  width: 15px;
+  height: 15px;
+}
+
+.bodyWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0;
+  .emptyDataContainer {
+    display: flex;
+    align-self: center;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    background-color: white;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+}

@@ -1,0 +1,16 @@
+<div class="app-modal" *ngIf="currentPhoto">
+    <div class="modalContainer">
+      <div class="modalHeadContainer">
+        <img
+          src="https://farm{{ currentPhoto.farm }}.staticflickr.com/{{
+          currentPhoto.server
+        }}/{{ currentPhoto.id }}_{{ currentPhoto.secret }}.jpg"
+          alt="{{ currentPhoto.title }}"
+        />
+        <i (click)="close()" class="fa fa-times"></i>
+      </div>
+      <div class="modalBodyContainer">
+        <h2>{{ currentPhoto.title }}</h2>
+      </div>
+    </div>
+</div>

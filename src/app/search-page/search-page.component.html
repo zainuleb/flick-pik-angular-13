@@ -1,0 +1,53 @@
+<div>
+  <div class="search-wrapper">
+    <form>
+      <input
+        [formControl]="search"
+        required
+        class="search-box"
+        placeholder="Enter search term"
+      />
+      <button class="search-icon" *ngIf="!search?.value">
+        <i class="fa fa-search"></i>
+      </button>
+
+      <button (click)="reset()" class="close-icon" type="reset" *ngIf="search?.value">
+        <i class="fa fa-times"></i>
+      </button>
+    </form>
+  </div>
+  <div>
+    <div class="photoSection">
+      <div
+        *ngFor="let photo of data?.photo"
+      >
+          <div class="photoItem">
+            <img
+              (click)="openModal(photo)"
+              src="https://farm{{ photo.farm }}.staticflickr.com/{{
+              photo.server
+            }}/{{ photo.id }}_{{ photo.secret }}.jpg"
+              alt="{{ photo.title }}"
+            />
+          </div>
+      </div>
+    </div>
+    <div *ngIf="loading" class="bodyWrapper">
+      <div class="emptyDataContainer">
+        <p>Loading...</p>
+      </div>
+    </div>
+    <div *ngIf="data && !data?.photo?.length" class="bodyWrapper">
+      <div class="emptyDataContainer">
+        <h2>No Data Found</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-modal
+  *ngIf="currentPhoto"
+  [currentPhoto]="currentPhoto"
+  (closeModal)="closeModal($event)"
+>
+</app-modal>
